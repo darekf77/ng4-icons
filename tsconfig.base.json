@@ -1,14 +1,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "baseUrl": "tmp-src",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "es2020",
+    "module": "esnext",
     "moduleResolution": "node",
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": [
@@ -19,16 +20,23 @@
       "dom"
     ],
     "paths": {
-      "iconify": [
-        "dist/iconify"
-      ],
-      "iconify/*": [
-        "dist/iconify/*"
+      "components": [
+        "../browser"
       ]
     }
   },
+  "exclude": [
+    ".ng_build",
+    "node_modules",
+    "dist",
+    "module*",
+    "src"
+  ],
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "fullTemplateTypeCheck": false,
+    "strictInjectionParameters": true,
+    "disableTypeScriptVersionCheck": true,
+    "skipTemplateCodegen": true,
+    "enableIvy": false
   }
 }

@@ -3,39 +3,43 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "iconify-angular": {
+    "test-pwa": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
-      "sourceRoot": "src",
-      "prefix": "ic",
+      "sourceRoot": "tmp-src",
+      "prefix": "app",
       "architect": {
         "build": {
+          "preserveSymlinks": true,
+          "showCircularDependencies": false,
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/iconify-angular",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "outputPath": "dist/test-pwa",
+            "index": "tmp-src/index.html",
+            "main": "tmp-src/main.ts",
+            "polyfills": "tmp-src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "tmp-src/favicon.ico",
+              "tmp-src/assets",
+              "tmp-src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "tmp-src/styles.scss"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [],
+              "showCircularDependencies": false,
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -52,42 +56,49 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
         "serve": {
+          "showCircularDependencies": false,
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "iconify-angular:build"
+            "browserTarget": "test-pwa:build",
+            "aot": false
           },
           "configurations": {
             "production": {
-              "browserTarget": "iconify-angular:build:production"
+              "browserTarget": "test-pwa:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "iconify-angular:build"
+            "browserTarget": "test-pwa:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "main": "tmp-src/test.ts",
+            "polyfills": "tmp-src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "tmp-src/favicon.ico",
+              "tmp-src/assets",
+              "tmp-src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "tmp-src/styles.scss"
             ],
             "scripts": []
           }
@@ -109,55 +120,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "iconify-angular:serve"
+            "devServerTarget": "test-pwa:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "iconify-angular:serve:production"
+              "devServerTarget": "test-pwa:serve:production"
             }
           }
         }
       }
-    },
-    "iconify": {
-      "projectType": "library",
-      "root": "projects/iconify",
-      "sourceRoot": "projects/iconify/src",
-      "prefix": "ic",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/iconify/tsconfig.lib.json",
-            "project": "projects/iconify/ng-package.json"
-          }
-        ,          "configurations": {
-            "production": {
-              "tsConfig": "projects/iconify/tsconfig.lib.prod.json"
-            }
-          }
-},
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/iconify/src/test.ts",
-            "tsConfig": "projects/iconify/tsconfig.spec.json",
-            "karmaConfig": "projects/iconify/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/iconify/tsconfig.lib.json",
-              "projects/iconify/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    }},
-  "defaultProject": "iconify-angular"
+    }
+  },
+  "defaultProject": "test-pwa"
 }

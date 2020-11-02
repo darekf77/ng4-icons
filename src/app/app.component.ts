@@ -1,4 +1,4 @@
-import { IconService } from './../../projects/iconify/src/lib/icon.service';
+import { IconService } from 'components';
 import { Component } from '@angular/core';
 import home from '@iconify/icons-mdi/home';
 import groupAdd from '@iconify/icons-mdi/group-add';
@@ -6,7 +6,7 @@ import bellSlash from '@iconify/icons-fa-solid/bell-slash';
 import { appIcons } from './icons';
 
 @Component({
-  selector: 'ic-root',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
