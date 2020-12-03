@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { Log, Level } from 'ng2-logger';
-const log = Log.create(`[ng4-icons] component`);
+const log = Log.create(`[ng4-icons] component`,
+  Level.__NOTHING
+);
 
 import { mdiPin } from '@mdi/js';
 import { mdiPinOff } from '@mdi/js';
@@ -61,7 +63,3 @@ export class Ng4IconsComponent {
   }
 }
 
-
-
-
-}
