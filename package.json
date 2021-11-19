@@ -22,7 +22,8 @@
     },
     "scripts": {},
     "license": "MIT",
-    "private": false
+    "private": false,
+    "workerPlugins": {}
   },
   "name": "ng4-icons",
   "version": "0.0.30",
@@ -183,7 +184,7 @@
     "ng2-file-upload": "1.3.0",
     "ng2-logger": "~8.0.20",
     "ng2-rest": "~11.0.42",
-    "ng4-icons": "~0.0.30",
+    "ng4-icons": "~0.0.29",
     "ng4-modal": "~0.0.29",
     "ngx-bootstrap": "5.2.0",
     "ngx-breadcrumbs": "0.0.3",
