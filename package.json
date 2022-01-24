@@ -257,5 +257,8 @@
     "zone.js": "0.10.2"
   },
   "license": "MIT",
-  "lastBuildTagHash": "5acc926b1a299062719569286a4c4422f49b324f"
+  "lastBuildTagHash": "5acc926b1a299062719569286a4c4422f49b324f",
+  "recreatedFrom": {
+    "tnp.json": true
+  }
 }
