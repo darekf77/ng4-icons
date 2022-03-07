@@ -1,0 +1,28 @@
+{
+  resources: ['README.md'],
+  overrided: {
+    linkedFolders: [],
+    ignoreDepsPattern: [],
+    includeAsDev: "*",
+    includeOnly: [
+      "@angular/core",
+      "@iconify/icons-fa-solid",
+      "@iconify/icons-mdi",
+      "@mdi/js",
+    ],
+    dependencies: {},
+  },
+  linkedProjects: [],
+  libReleaseOptions: {
+    nodts: false,
+    obscure: false,
+    ugly: false,
+  },
+  type: "isomorphic-lib",
+  version: "v3",
+  additionalNpmNames: ["firedev-icons"],
+  scripts: {},
+  license: "MIT",
+  private: false,
+  workerPlugins: {},
+}
