@@ -10,5 +10,6 @@
     "@mdi/js": "6.5.95"
   },
   "license": "MIT",
-  "lastBuildTagHash": "5acc926b1a299062719569286a4c4422f49b324f"
+  "lastBuildTagHash": "5acc926b1a299062719569286a4c4422f49b324f",
+  "devDependencies": {}
 }
