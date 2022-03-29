@@ -3,7 +3,7 @@
   overrided: {
     linkedFolders: [],
     ignoreDepsPattern: [],
-    includeAsDev: "*",
+    includeAsDev: [],
     includeOnly: [
       "@angular/core",
       "@iconify/icons-fa-solid",
