@@ -10,7 +10,7 @@
     "@mdi/js": "6.5.95"
   },
   "license": "MIT",
-  "lastBuildTagHash": "475496d3c0812374f63705855d3cf3ed57ac6399",
+  "lastBuildTagHash": "de7906f8e0725400a824dfc6c5da3ea906d950a4",
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.5",
     "@angular-devkit/core": "~13.2.6",
@@ -171,7 +171,7 @@
     "ng-talkback": "~13.0.15",
     "ng2-logger": "~13.0.25",
     "ng2-rest": "~13.0.34",
-    "ng4-icons": "~13.0.16",
+    "ng4-icons": "~13.0.17",
     "ng4-modal": "~13.0.18",
     "ngx-bootstrap": "8.0.0",
     "ngx-editor": "12.2.1",
