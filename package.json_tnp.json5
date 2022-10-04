@@ -1,5 +1,6 @@
 {
   resources: ['README.md'],
+
   overrided: {
     linkedFolders: [],
     ignoreDepsPattern: [],
@@ -12,12 +13,16 @@
     ],
     dependencies: {},
   },
+
   linkedProjects: [],
+  linkedRepos: [],
+
   libReleaseOptions: {
     nodts: false,
     obscure: false,
     ugly: false,
   },
+
   type: "isomorphic-lib",
   version: "v3",
   additionalNpmNames: ["firedev-icons"],
