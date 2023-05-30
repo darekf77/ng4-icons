@@ -5,13 +5,16 @@
     linkedFolders: [],
     ignoreDepsPattern: [],
     includeAsDev: [],
+
     includeOnly: [
       "@angular/core",
       "@iconify/icons-fa-solid",
       "@iconify/icons-mdi",
       "@mdi/js",
     ],
+
     dependencies: {},
+    npmFixes: [],
   },
 
   linkedProjects: [],
