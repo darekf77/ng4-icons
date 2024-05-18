@@ -1,32 +1,21 @@
 {
   "tnp": {
-    "resources": [
-      "README.md"
-    ],
+    "resources": [],
     "overrided": {
       "linkedFolders": [],
       "ignoreDepsPattern": [],
+      "npmFixes": [],
       "includeAsDev": [],
-      "includeOnly": [
-        "@angular/core",
-        "@iconify/icons-fa-solid",
-        "@iconify/icons-mdi",
-        "@mdi/js"
-      ],
-      "dependencies": {},
-      "npmFixes": []
+      "includeOnly": [],
+      "dependencies": {}
     },
     "smartContainerBuildTarget": "",
     "linkedRepos": [],
     "libReleaseOptions": {
-      "nodts": false,
-      "obscure": false,
-      "ugly": false,
-      "includeNodeModules": false,
       "cliBuildNoDts": false,
       "cliBuildObscure": false,
-      "cliBuildIncludeNodeModules": false,
-      "cliBuildUglify": false
+      "cliBuildUglify": false,
+      "cliBuildIncludeNodeModules": false
     },
     "smartContainerTarget": "",
     "type": "isomorphic-lib",
